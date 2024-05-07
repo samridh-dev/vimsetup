@@ -7,12 +7,12 @@
 
 int main(int argc, char * argv[]) {
 
-  int flag_ninstall = 0;
-  int flag_nconfigure = 0;
+  int flag_install_only = 0;
+  int flag_config_only = 0;
 
   struct option long_options[] = {
-    {"no-install", no_argument, &flag_ninstall, 1},
-    {"no-configure", no_argument, &flag_nconfigure, 1},
+    {"install-only", no_argument, &flag_config_only, 1},
+    {"config-only", no_argument, &flag_config_only, 1},
     {0, 0, 0, 0}  // End of options marker
   };
 
@@ -28,16 +28,18 @@ int main(int argc, char * argv[]) {
   }
 
   // Begin installation
-  
-  if (!flag_ninstall) {
-    printf("running installation\n");
+  if (flag_install_only) {
     install();
+    return 0;
   }
 
-  if (!flag_nconfigure) {
-    printf("running configuration\n");
+  if (flag_config_only) {
     configure();
+    return 0;
   }
+
+  install();
+  configure();
 
   return 0;
 
