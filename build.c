@@ -15,7 +15,7 @@
 
 #define SET_DEBUG 1
 
-static const char* exec_name = "vimsetup-source";
+static const char* exec_name = "vimsetup";
 
 // source files and directory
 static const char* src_dir = "src/";
