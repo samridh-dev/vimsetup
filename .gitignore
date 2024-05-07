@@ -1,0 +1,9 @@
+/config/pack/plugins/start/*
+
+/a.out
+/make
+/build
+/vimsetup
+
+*.dat
+*.log
