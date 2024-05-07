@@ -21,13 +21,18 @@ If any changes is made to build.c recompilation is `not` necessary.
 
 Run the binary:
 ```bash
-vimsetup
+./vimsetup
 ```
 To install and configure vim.
 
 To simply configure a preexisting installation, run the command:
 ```bash
-vimsetup --config-only
+./vimsetup --config-only
+```
+
+Likewise to install vim without configuration, run the following command:
+```bash
+./vimsetup --install-only
 ```
 
 ## Notes
