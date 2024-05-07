@@ -15,7 +15,7 @@ cc build.c -o make
 make
 ```
 
-If any changes is made to build.c recompilation is `not` necessary.
+If any changes is made to build.c, recompilation is `not` necessary.
 
 ## Usage
 
