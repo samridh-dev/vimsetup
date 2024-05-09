@@ -1,8 +1,9 @@
 " .vimrc
+source $HOME/.vim/settings/colorscheme.vim 
 
-source $HOME/.vim/settings/colorscheme.vim
+source $HOME/.vim/settings/comments.vim 
 
-source $HOME/.vim/settings/configs.vim
+source $HOME/.vim/settings/autocomplete.vim  
+
+source $HOME/.vim/settings/configs.vim 
 source $HOME/.vim/settings/mappings.vim
-
-source $HOME/.vim/settings/autocomplete.vim

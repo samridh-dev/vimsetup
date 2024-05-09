@@ -5,7 +5,8 @@
 void configure(void) {
 
   char cmd[65535];
-  
+
+#if 0
   // install autocomplete
   snprintf(cmd, sizeof(cmd), 
   "rm -rf config/pack/plugins/start/supertab;"
@@ -14,10 +15,10 @@ void configure(void) {
   "config/pack/plugins/start/supertab"
   );
   system(cmd);
+#endif
   
-  system(cmd);
   snprintf(cmd, sizeof(cmd), 
-  "rm -rf ~/.vim/* && cp -r config/* ~/.vim/"
+  "mkdir -p ~/.vim/ && rm -rf ~/.vim/* && cp -r config/* ~/.vim/"
   );
   system(cmd);
 

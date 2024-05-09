@@ -7,40 +7,42 @@
 
 int main(int argc, char * argv[]) {
 
-  int flag_install_only = 0;
-  int flag_config_only = 0;
+  int flag_install = 0;
+  int flag_config = 0;
+  int flag_full = 0;
 
   struct option long_options[] = {
-    {"install-only", no_argument, &flag_config_only, 1},
-    {"config-only", no_argument, &flag_config_only, 1},
-    {0, 0, 0, 0}  // End of options marker
+    {"full",     no_argument,  &flag_full,     1},
+    {"install",  no_argument,  &flag_install,  1},
+    {"config",   no_argument,  &flag_config,   1},
+    {0,          0,            0,              0}  // End of options marker
   };
-
   int opt;
   while ((opt = getopt_long(argc, argv, "", 
                 long_options, NULL)) != -1) {
     
     switch (opt) {
+      case '?':
+        printf("Unknown option provided: '%s'\n", optarg);
+        break;
       default: 
-        break; 
+        break;
     }
 
   }
 
-  // Begin installation
-  if (flag_install_only) {
+  if (flag_install) {
     install();
-    return 0;
   }
 
-  if (flag_config_only) {
+  if (flag_config) {
     configure();
-    return 0;
   }
-
-  install();
-  configure();
+  
+  if (flag_full) {
+    install();
+    configure();
+  }
 
   return 0;
-
 }

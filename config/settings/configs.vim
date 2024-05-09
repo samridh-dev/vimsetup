@@ -33,3 +33,5 @@ set ttyfast
 set ruler
 
 set updatetime=500
+
+set viminfo='20,<1000,s1000
