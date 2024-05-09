@@ -23,16 +23,21 @@ Run the binary:
 ```bash
 ./vimsetup
 ```
-To install and configure vim.
+There are three options to install vim
 
-To simply configure a preexisting installation, run the command:
+To only install the configuration files for vim, run:
 ```bash
-./vimsetup --config-only
+./vimsetup --config
 ```
 
-Likewise to install vim without configuration, run the following command:
+To compile vim with default configurations, run:
 ```bash
-./vimsetup --install-only
+./vimsetup --install
+```
+
+To compile vim with configurations, run:
+```bash
+./vimsetup --full
 ```
 
 ## Notes
