@@ -4,12 +4,13 @@
 "          repeated to fit within a column limit, and a suffix.
 " Usage: The comment bar adapts to the filetype of the currently edited file,
 "        useful for adding structured comments.
+
 function! MakeCommentBar()
 
   let patterns = {
         \  'c'      :    ['/*', '-', '*/'],
         \  'cpp'    :    ['/*', '-', '*/'],
-        \  'vim'    :    ['',   '"', ''],
+        \  'vim'    :    ['"',  '"', '"'],
         \  'python' :    ['# ', '-', ' #'],
         \  'sh'     :    ['# ', '-', ' #'],
         \  }

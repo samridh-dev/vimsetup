@@ -44,9 +44,23 @@ nnoremap <leader>c "_c
 vnoremap <leader>c "_c
 
 " Yank to system clipboard
-nnoremap <leader>y "+y
-vnoremap <leader>y "+y
-nnoremap <leader>Y "+Y
+" Note: This is very Hacky. Do revise this implementation
+function! SystemClipboardSetup()
+
+  if !empty($WAYLAND_DISPLAY)
+    " Wayland system
+    nnoremap <silent> <leader>y :call system('wl-copy', @")<CR>
+    xnoremap <silent> <leader>y :w !wl-copy<CR><CR>
+       
+  else
+    " Other systems
+    nnoremap <leader>y "*y
+    vnoremap <leader>y "*y
+    
+  endif
+endfunction
+
+call SystemClipboardSetup()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Buffer Workflow
@@ -63,10 +77,16 @@ nnoremap <leader>, :bprevious<CR>
 nnoremap <leader>/ <C-^>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Comments (Refer to comment.vim)
+""" Comments (Refer to comments.vim)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>cb :call MakeCommentBar()<CR>
+
+nnoremap <leader>ch   :call MakeCommentHeader1()<CR>
+nnoremap <leader>chh  :call MakeCommentHeader2()<CR>
+nnoremap <leader>chhh :call MakeCommentHeader3()<CR>
+
+nnoremap <leader>cf :call FormatBoundComment()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ End

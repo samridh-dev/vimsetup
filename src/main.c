@@ -17,6 +17,7 @@ int main(int argc, char * argv[]) {
     {"config",   no_argument,  &flag_config,   1},
     {0,          0,            0,              0}  // End of options marker
   };
+
   int opt;
   while ((opt = getopt_long(argc, argv, "", 
                 long_options, NULL)) != -1) {
