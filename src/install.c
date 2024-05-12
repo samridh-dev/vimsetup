@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 void install(void) {
+
+  printf("Installing vim\n");
+
   char cmd[65535];
 
   // Remove existing Vim directory
