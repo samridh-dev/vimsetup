@@ -11,11 +11,11 @@ Compiling the make script is necessary. to do so simply run the command in
 project root:
 
 ```bash
-cc build.c -o make
+cc -o mm mm.c
 make
 ```
 
-If any changes is made to build.c, recompilation is `not` necessary.
+If any changes is made to mm.c or mm.h, recompilation is `not` necessary.
 
 ## Usage
 
