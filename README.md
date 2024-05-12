@@ -11,8 +11,7 @@ Compiling the make script is necessary. to do so simply run the command in
 project root:
 
 ```bash
-cc -o mm mm.c
-make
+cc -o mm mm.c && mm
 ```
 
 If any changes is made to mm.c or mm.h, recompilation is `not` necessary.
