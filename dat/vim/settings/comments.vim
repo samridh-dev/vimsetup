@@ -11,8 +11,9 @@ function! MakeCommentBar()
         \  'c'      :    ['/*', '-', '*/'],
         \  'cpp'    :    ['/*', '-', '*/'],
         \  'vim'    :    ['"',  '"', '"'],
-        \  'python' :    ['# ', '-', ' #'],
-        \  'sh'     :    ['# ', '-', ' #'],
+        \  'python' :    ['#', '-', '#'],
+        \  'sh'     :    ['#', '-', '#'],
+        \  'tex'    :    ['%', '-', '%'],
         \  }
   let pattern = get(patterns, &filetype, ['','',''])
   if pattern == ['','','']
@@ -53,6 +54,7 @@ function! MakeCommentHeader1()
         \  'vim'    :    '"',
         \  'python' :    '#',
         \  'sh'     :    '#',
+        \  'tex'    :    '%'
         \  }
   let pattern = get(patterns, &filetype, '')
   if pattern == ''
@@ -92,11 +94,12 @@ endfunction
 function! MakeCommentHeader2()
 
   let patterns = {
-    \  'c'      : ['/*' , '-' , '*/'],
-    \  'cpp'    : ['/*' , '-' , '*/'],
-    \  'vim'    : ['"'  , '-' , '"'],
-    \  'python' : ['#'  , '-' , '#'],
-    \  'sh'     : ['#'  , '-' , '#']
+    \  'c'      :    ['/*' , '-' , '*/'],
+    \  'cpp'    :    ['/*' , '-' , '*/'],
+    \  'vim'    :    ['"'  , '-' , '"'],
+    \  'python' :    ['#'  , '-' , '#'],
+    \  'sh'     :    ['#'  , '-' , '#'],
+    \  'tex'    :    ['%'  , '-' , '%'],
     \  }
   let pattern = get(patterns, &filetype, ['', '', ''])
   if pattern == ['','','']
@@ -141,11 +144,12 @@ endfunction
 function! MakeCommentHeader3()
 
   let patterns = {
-    \  'c'      : ['/*' , '-' , '*/'],
-    \  'cpp'    : ['/*' , '-' , '*/'],
-    \  'vim'    : ['"'  , '-' , '"'],
-    \  'python' : ['#'  , '-' , '#'],
-    \  'sh'     : ['#'  , '-' , '#']
+    \  'c'      :    ['/*' , '-' , '*/'],
+    \  'cpp'    :    ['/*' , '-' , '*/'],
+    \  'vim'    :    ['"'  , '-' , '"'],
+    \  'python' :    ['#'  , '-' , '#'],
+    \  'sh'     :    ['#'  , '-' , '#'],
+    \  'tex'    :    ['%'  , '-' , '%'],
     \  }
   let pattern = get(patterns, &filetype, ['', '', ''])
   if pattern == ['','','']
@@ -182,11 +186,12 @@ endfunction
 function! FormatBoundComment()
 
   let patterns = {
-    \  'c'      : ['/*' , '-' , '*/'],
-    \  'cpp'    : ['/*' , '-' , '*/'],
-    \  'vim'    : ['"'  , '-' , '"'],
-    \  'python' : ['#'  , '-' , '#'],
-    \  'sh'     : ['#'  , '-' , '#']
+    \  'c'      :    ['/*' , '-' , '*/'],
+    \  'cpp'    :    ['/*' , '-' , '*/'],
+    \  'vim'    :    ['"'  , '-' , '"'],
+    \  'python' :    ['#'  , '-' , '#'],
+    \  'sh'     :    ['#'  , '-' , '#'],
+    \  'tex'    :    ['%'  , '-' , '%'],
     \  }
   let pattern = get(patterns, &filetype, ['', '', ''])
   if pattern == ['','','']

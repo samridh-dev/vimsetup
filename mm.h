@@ -16,8 +16,8 @@
 // ARG is memory to store arguments
 // CMD is memory to store main command arguments
 
-#define MM_SRC_MAXSIZE 8
-#define MM_ARG_MAXSIZE 16
+#define MM_SRC_MAXSIZE 64 
+#define MM_ARG_MAXSIZE 64
 
 #define MM_CMD_MAXSIZE \
 ((MM_SRC_MAXSIZE + MM_ARG_MAXSIZE) + 16)

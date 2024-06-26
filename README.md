@@ -5,6 +5,9 @@ systems. The main objective is to have a script that can install vim along
 with my configuration on any linux and MacOS devices, with no preexisting 
 setup and dependencies. 
 
+It is in my interest to extend this program to Windows and perhaps other non
+posix systems.
+
 ## Installation
 
 Compiling the make script is necessary. to do so simply run the command in
@@ -40,4 +43,4 @@ To compile vim with configurations, run:
 ```
 
 ## Notes
-All vim configurations files are located at the conf/ directory.
+All vim configurations files are located at the dat/vim/ directory.

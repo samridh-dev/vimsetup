@@ -30,6 +30,11 @@ command! W  w
 command! WQ wq
 command! Wq wq
 
+" Set make to save and make program silently
+autocmd FileType * command! 
+      \ -bar Make execute 'silent w' | silent make | redraw!
+nnoremap <leader>m :Make<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Yank/Paste
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -77,11 +82,26 @@ nnoremap <leader>, :bprevious<CR>
 nnoremap <leader>/ <C-^>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Quickfix List
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Open and close quickfix
+nnoremap <leader>co :copen<CR>
+nnoremap <leader>cc :cclose<CR>
+
+" Next error
+nnoremap <leader>cn :cnext<CR>
+
+" Previous error
+nnoremap <leader>c? :cprev<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Comments (Refer to comments.vim)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 nnoremap <leader>cb :call MakeCommentBar()<CR>
 
+" TODO: make this faster
 nnoremap <leader>ch   :call MakeCommentHeader1()<CR>
 nnoremap <leader>chh  :call MakeCommentHeader2()<CR>
 nnoremap <leader>chhh :call MakeCommentHeader3()<CR>
