@@ -4,6 +4,11 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* TODO: 
+ *      - Embed vimrc to binary
+ *      - add windows functionality
+*/
+
 /* ------------------------------------------------------------------------- */
 /* Command Line Functions                                                    */
 /* ------------------------------------------------------------------------- */
@@ -38,8 +43,8 @@ static void vs_parseopts(int argc, char* argv[],
         *f_install = 0;
 
         if (argc == 1) {
-          vs_print_version(argc, argv);
-          exit(0);
+                vs_print_version(argc, argv);
+                exit(0);
         }
         
         i = 1;
@@ -72,11 +77,14 @@ static void vs_parseopts(int argc, char* argv[],
         }
 
         if ((*f_full + *f_config + *f_install) > 1)  {
+
                 fprintf(stderr, 
                         "Error: Only one flag can be set. " 
                         "Refer to %s --help for more specifications.\n",
                         argv[0]);
+
                 exit(-1);
+
         }
 
 }

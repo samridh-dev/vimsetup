@@ -34,7 +34,11 @@ void vs_configure(void) {
         char src[VS_CONFIG_BUFSIZE];
 
         const char* const HOME = get_home();
-        
+       
+        /* delete ~/.vimrc */
+        sprintf(dst, "%s/.vimrc", HOME);
+        vs_rm(dst);
+
         sprintf(dst, "%s/.vim/", HOME);
         sprintf(src, "./dat/vim/");
 

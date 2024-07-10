@@ -13,6 +13,7 @@ function! MakeCommentBar()
         \  'vim'    :    ['"',  '"', '"'],
         \  'python' :    ['#', '-', '#'],
         \  'sh'     :    ['#', '-', '#'],
+        \  'txt'     :   ['#', '-', '#'],
         \  'tex'    :    ['%', '-', '%'],
         \  }
   let pattern = get(patterns, &filetype, ['','',''])

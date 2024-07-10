@@ -21,7 +21,8 @@ void vs_rm(const char* const fname) {
         if (remove(fname) == 0) {
                 printf("Successfully deleted file: %s\n", fname);
         } else {
-                perror("Error deleting file");
+                fprintf(stderr, "Warning: Could not delete file: %s: ", fname);
+                perror("");
         }
 
 }

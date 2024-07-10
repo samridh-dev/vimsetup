@@ -87,13 +87,11 @@ nnoremap <leader>/ <C-^>
 
 " Open and close quickfix
 nnoremap <leader>co :copen<CR>
-nnoremap <leader>cc :cclose<CR>
+nnoremap <leader>cq :cclose<CR>
 
-" Next error
-nnoremap <leader>cn :cnext<CR>
-
-" Previous error
-nnoremap <leader>c? :cprev<CR>
+" Next and previous error
+nnoremap <leader>c. :cnext<CR>
+nnoremap <leader>c, :cprev<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Comments (Refer to comments.vim)
